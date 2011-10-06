@@ -1,0 +1,110 @@
+/* 
+    Document   : simplecms.css
+    Created on : 27.09.2011, 09:37:57
+    Author     : marcsteiner
+    Description: http://www.w3.org/TR/REC-CSS2/
+*/
+
+.simplecms-textcontent, .simplecms-imagecontent { 
+   
+}
+
+div.simplecms-edit{
+    padding: 1px;
+    position: relative;
+}
+div.simplecms-edit.inline{
+    display: inline;
+    width: 0px;
+}
+
+
+div.simplecms-edit.active{
+    background-color: yellow;
+    border: red solid 1px;
+    padding: 0px;    
+    filter:alpha(opacity=50);
+    opacity: 0.5;
+    -moz-opacity:0.5;        
+}
+
+
+div.simplecms-edit a.simplecms-deletelink, div.simplecms-edit a.simplecms-addlink, div.simplecms-edit a.simplecms-editlink{
+    display: none;     
+}
+div.simplecms-edit.active a.simplecms-deletelink, div.simplecms-edit.active a.simplecms-addlink, div.simplecms-edit.active a.simplecms-editlink{
+    display: block;    
+    position: absolute;  
+    width: 24px;
+    height: 24px;
+    top: -12px;
+    background: black;    
+    filter:alpha(opacity=90);
+    opacity: 0.9;
+    -moz-opacity:0.9;    
+    z-index: 999;
+}
+div.simplecms-edit.active a.simplecms-deletelink{
+    background: url(images/delete.png);
+    left: 0px;
+}
+div.simplecms-edit.active a.simplecms-editlink{
+    background: url(images/edit.gif);
+    left: 26px;
+}
+div.simplecms-edit.active a.simplecms-addlink{
+    background: url(images/add.png);
+}
+
+div.simplecms-edit-collection {
+    border: blue solid 1px;  
+}
+div.simplecms-edit-collection.inline {
+    display: inline;
+    width: 0px;
+}
+div.simplecms-edit-collection.active {
+   
+}
+
+div.simplecms-edit-collection div.simplecms-edit{
+    
+}
+div.simplecms-edit-collection div.simplecms-edit.active{
+    
+}
+
+
+
+form.simplecms-editform{
+    min-width: 500px;    
+    min-height:100px;    
+}
+form.simplecms-editform label{
+    min-width: 150px;
+    display: block;
+    float: left;
+    text-align: left;
+}
+form.simplecms-editform input{
+    min-width: 300px;
+    display: block;
+    float: right;    
+    text-align: left;
+}
+form.simplecms-editform textarea{
+    min-width: 300px;
+    min-height: 100px;
+    display: block;
+    float: right;    
+    text-align: left;
+    resize: auto;
+}
+
+
+.simplecms-jquery-dialog .ui-button-text{
+    background:  url(images/save.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}

@@ -1,0 +1,5 @@
+{%if groupkey is defined and groupkey %}
+{{ scmsc( groupkey[1],type,args,default ) }}
+{% else %}
+{{ scms( key,type,args,default ) }}
+{% endif %}

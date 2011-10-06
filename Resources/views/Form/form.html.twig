@@ -1,0 +1,19 @@
+{% block field_row %}
+{% spaceless %}
+   <div class="form-row {% for type in form.get('types') %} {{type}}{% endfor %}">       
+       {% if(label != 'none') %}
+        {{ form_label(form, label|default(null)) }}
+       {% endif %}
+       {{ form_errors(form) }}
+       {{ form_widget(form) }} 
+       
+   </div>
+{% endspaceless %}
+{% endblock field_row %}
+
+{% block textarea_widget %}
+{% spaceless %}
+    {#% for attrname,attrvalue in attr %}{{attrname}}="{{attrvalue}}" {% endfor %#}
+    <textarea {{ block('widget_attributes') }}>{{ value }}</textarea>
+{% endspaceless %}
+{% endblock textarea_widget %}

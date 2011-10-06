@@ -1,0 +1,19 @@
+
+
+
+<form class="simplecms-editform {% if args.html is defined and args.html == true %}simplecms-html{% endif %}" action="{{ path('ibrows_simple_cms_content_update', { 'id': entity.id,'type':type }) }}?{{additional}}" method="post" {{ form_enctype(edit_form) }}>
+    <input type="hidden" name="_xml_http_request" value="true"> 
+    {% form_theme edit_form 'IbrowsSimpleCMSBundle:Form:form.html.twig' %}
+
+    {{ form_errors(edit_form) }}
+    {% for  key, item in  edit_form %}
+
+
+      {{ form_row(item) }}
+
+    {% endfor %}
+
+
+    {{ form_rest(edit_form) }}    
+
+</form>

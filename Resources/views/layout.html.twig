@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Simple CMS Admin</title>
+    </head>
+    <body>
+                    <div class="scms-admin">
+                        {% for key, flash in app.session.getFlashes() %}
+                        <div class="scms-flash {{ flash }}">
+                            {{ key }}
+                        </div>
+                        {% endfor %}
+                         <div class="scms-content">   
+                        {% block content %}
+                        {% endblock %}
+                         </div>        
+                    </div>
+
+    </body>
+</html>

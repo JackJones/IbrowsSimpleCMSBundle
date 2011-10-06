@@ -1,0 +1,16 @@
+<h1>{{type}} Content creation</h1>
+
+<form action="{{ path('ibrows_simple_cms_content_create',{'type':type}) }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <p>
+        <button type="submit">Create</button>
+    </p>
+</form>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('ibrows_simple_cms_content',{'type':type}) }}">
+            Back to the list
+        </a>
+    </li>
+</ul>

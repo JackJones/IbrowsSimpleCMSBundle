@@ -1,0 +1,56 @@
+{% extends "IbrowsSimpleCMSBundle::layout.html.twig" %}
+
+{% block content %}
+<h1>{{type}} Content list</h1>
+
+  <ul>
+    {% for type, item in types %}
+
+              
+                    <li>
+                        <a href="{{ path('ibrows_simple_cms_content', { 'type':type }) }}">show {{item.label}}</a>                        
+                    </li>
+              
+
+    {% endfor %}
+  </ul>
+{% if entities %}
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Keyword</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('ibrows_simple_cms_content_show', { 'id': entity.id,'type':type }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.keyword }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('ibrows_simple_cms_content_show', { 'id': entity.id,'type':type }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('ibrows_simple_cms_content_edit', { 'id': entity.id,'type':type }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('ibrows_simple_cms_content_new',{ 'type':type }) }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>
+
+{% endif %}
+
+{% endblock %}
