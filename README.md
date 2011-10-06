@@ -68,7 +68,7 @@ Install & setup the bundle
     
     ``` bash 
 
-    git submodule add https://github.com/ibrows/IbrowsSimpleCMSBundle vendor/bundles/Ibrows/SimpleCMSBundle
+    git submodule add git@github.com/ibrows/IbrowsSimpleCMSBundle vendor/bundles/Ibrows/SimpleCMSBundle
 
     ```
         
@@ -78,7 +78,7 @@ Install & setup the bundle
 
     mkdir -p vendor/bundles/Ibrows/SimpleCMSBundle
     cd !$
-    git clone https://github.com/ibrows/IbrowsSimpleCMSBundle
+    git clone git@github.com/ibrows/IbrowsSimpleCMSBundle
 
     ```
 
