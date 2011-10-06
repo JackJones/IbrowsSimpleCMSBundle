@@ -59,7 +59,7 @@ Install & setup the bundle
 
     ``` bash 
     [IbrowsSimpleCMSBundle]
-    git=git@codebasehq.com:ibrows/printzessin/scms.git
+    git=https://github.com/ibrows/IbrowsSimpleCMSBundle
     target=/bundles/Ibrows/SimpleCMSBundle
 
     ```
@@ -68,7 +68,7 @@ Install & setup the bundle
     
     ``` bash 
 
-    git submodule add git@codebasehq.com:ibrows/printzessin/scms.git vendor/bundles/Ibrows/SimpleCMSBundle
+    git submodule add https://github.com/ibrows/IbrowsSimpleCMSBundle vendor/bundles/Ibrows/SimpleCMSBundle
 
     ```
         
@@ -78,7 +78,7 @@ Install & setup the bundle
 
     mkdir -p vendor/bundles/Ibrows/SimpleCMSBundle
     cd !$
-    git clone git@codebasehq.com:ibrows/printzessin/scms.git
+    git clone https://github.com/ibrows/IbrowsSimpleCMSBundle
 
     ```
 
